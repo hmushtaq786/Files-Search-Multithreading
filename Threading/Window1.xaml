@@ -1,0 +1,17 @@
+﻿<Window x:Class="Threading.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Threading"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="800">
+    <Grid>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="57,56,0,0" VerticalAlignment="Top" Width="219" Height="73" FontSize="36"/>
+        <Label Content="Comments" HorizontalAlignment="Left" Margin="57,160,0,0" VerticalAlignment="Top" Height="83" Width="189" FontSize="36"/>
+        <TextBox HorizontalAlignment="Left" Height="73" Margin="307,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" FontSize="36" BorderThickness="2"/>
+        <TextBox HorizontalAlignment="Left" Height="132" Margin="307,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" FontSize="36" BorderThickness="2"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="586,321,0,0" VerticalAlignment="Top" Width="171" Height="67" FontSize="36"/>
+
+    </Grid>
+</Window>

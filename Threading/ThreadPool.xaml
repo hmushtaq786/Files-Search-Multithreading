@@ -1,0 +1,14 @@
+﻿<Window x:Class="Threading.ThreadPool"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Threading"
+        mc:Ignorable="d"
+        Title="ThreadPool" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="startBtn" Content="Button" HorizontalAlignment="Left" Margin="292,169,0,0" VerticalAlignment="Top" Width="172" Height="56" Click="StartBtn_Click"/>
+        <Label x:Name="label" Content="" HorizontalAlignment="Left" Margin="312,301,0,0" VerticalAlignment="Top" Width="133"/>
+
+    </Grid>
+</Window>

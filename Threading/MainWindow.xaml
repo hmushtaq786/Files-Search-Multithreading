@@ -1,0 +1,108 @@
+﻿<Window x:Class="WPFApplication.BackgroundWorkerDemo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFApplication"
+        mc:Ignorable="d"
+        Title="File Finder" Height="600" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <ProgressBar x:Name="progressBar" Height="35" Margin="10,219,10,0" VerticalAlignment="Top"/>
+        <ListBox x:Name="filesList" Margin="10,259,10,10" Background="#FFC7C5E0"/>
+        <CheckBox x:Name="jpgBox" Content=".jpg" HorizontalAlignment="Left" Margin="17,26,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="14" RenderTransformOrigin="0.5,0.5">
+            <CheckBox.LayoutTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1.6" ScaleX="1.6"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+        <CheckBox x:Name="pngBox" Content=".png" HorizontalAlignment="Left" Margin="17,64,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="14" RenderTransformOrigin="0.5,0.5">
+            <CheckBox.LayoutTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1.6" ScaleX="1.6"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+        <CheckBox x:Name="icoBox" Content=".ico" HorizontalAlignment="Left" Margin="17,102,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="14" RenderTransformOrigin="0.5,0.5">
+            <CheckBox.LayoutTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1.6" ScaleX="1.6"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+        <CheckBox x:Name="rawBox" Content=".raw" HorizontalAlignment="Left" Margin="127,26,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="14" RenderTransformOrigin="0.5,0.5">
+            <CheckBox.LayoutTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1.6" ScaleX="1.6"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+        <CheckBox x:Name="pdfBox" Content=".pdf" HorizontalAlignment="Left" Margin="127,64,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="14" RenderTransformOrigin="0.5,0.5">
+            <CheckBox.LayoutTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1.6" ScaleX="1.6"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+        <CheckBox x:Name="txtBox" Content=".txt" HorizontalAlignment="Left" Margin="127,102,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="14" RenderTransformOrigin="0.5,0.5">
+            <CheckBox.LayoutTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1.6" ScaleX="1.6"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+        <CheckBox x:Name="docxBox" Content=".docx" HorizontalAlignment="Left" Margin="17,141,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="14" RenderTransformOrigin="0.5,0.5">
+            <CheckBox.LayoutTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1.6" ScaleX="1.6"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+        <CheckBox x:Name="pptxBox" Content=".pptx" HorizontalAlignment="Left" Margin="127,141,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="14" RenderTransformOrigin="0.5,0.5">
+            <CheckBox.LayoutTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1.6" ScaleX="1.6"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+        <CheckBox x:Name="selectallBox" Content="Select all" HorizontalAlignment="Left" Margin="17,181,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="14" RenderTransformOrigin="0.5,0.5" Checked="SelectallBox_Checked" Unchecked="SelectallBox_Unchecked">
+            <CheckBox.LayoutTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1.6" ScaleX="1.6"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+        <Button x:Name="selectfolderBtn" Content="Change" Margin="688,27,10,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="20" Click="SelectfolderBtn_Click" Height="42"/>
+        <Label x:Name="directoryText" Content="D:\Study" Margin="241,27,0,0" VerticalAlignment="Top" Height="42" FontFamily="Calibri" FontSize="22" VerticalContentAlignment="Center" BorderBrush="#FFABADB3" BorderThickness="1" HorizontalAlignment="Left" Width="431"/>
+        <Button x:Name="startBtn" FontSize="24" Content="Start" Margin="688,90,10,0" VerticalAlignment="Top" Click="StartBtn_Click" Height="42"/>
+        <Button x:Name="resetBtn" Content="Reset" Margin="688,153,10,0" VerticalAlignment="Top" Height="42" FontFamily="Calibri" FontSize="20" Click="ResetBtn_Click"/>
+
+    </Grid>
+</Window>
